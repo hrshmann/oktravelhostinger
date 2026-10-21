@@ -1,0 +1,12 @@
+Options -Indexes
+RewriteEngine On
+
+# Block private files
+RewriteRule ^data/ - [F,L]
+RewriteRule ^config\.php$ - [F,L]
+
+# Admin page
+RewriteRule ^admin/?$ admin.html [L]
+
+# API -> api.php
+RewriteRule ^api/(.*)$ api.php?route=$1 [QSA,L]

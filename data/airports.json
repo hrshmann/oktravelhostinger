@@ -1,0 +1,548 @@
+[
+ {
+  "code": "DXB",
+  "city": "Dubai",
+  "name": "Dubai International",
+  "country": "United Arab Emirates"
+ },
+ {
+  "code": "DWC",
+  "city": "Dubai",
+  "name": "Al Maktoum International",
+  "country": "United Arab Emirates"
+ },
+ {
+  "code": "AUH",
+  "city": "Abu Dhabi",
+  "name": "Zayed International",
+  "country": "United Arab Emirates"
+ },
+ {
+  "code": "SHJ",
+  "city": "Sharjah",
+  "name": "Sharjah International",
+  "country": "United Arab Emirates"
+ },
+ {
+  "code": "DOH",
+  "city": "Doha",
+  "name": "Hamad International",
+  "country": "Qatar"
+ },
+ {
+  "code": "BAH",
+  "city": "Manama",
+  "name": "Bahrain International",
+  "country": "Bahrain"
+ },
+ {
+  "code": "KWI",
+  "city": "Kuwait City",
+  "name": "Kuwait International",
+  "country": "Kuwait"
+ },
+ {
+  "code": "MCT",
+  "city": "Muscat",
+  "name": "Muscat International",
+  "country": "Oman"
+ },
+ {
+  "code": "JED",
+  "city": "Jeddah",
+  "name": "King Abdulaziz International",
+  "country": "Saudi Arabia"
+ },
+ {
+  "code": "MED",
+  "city": "Madinah",
+  "name": "Prince Mohammad bin Abdulaziz",
+  "country": "Saudi Arabia"
+ },
+ {
+  "code": "RUH",
+  "city": "Riyadh",
+  "name": "King Khalid International",
+  "country": "Saudi Arabia"
+ },
+ {
+  "code": "DMM",
+  "city": "Dammam",
+  "name": "King Fahd International",
+  "country": "Saudi Arabia"
+ },
+ {
+  "code": "KHI",
+  "city": "Karachi",
+  "name": "Jinnah International",
+  "country": "Pakistan"
+ },
+ {
+  "code": "LHE",
+  "city": "Lahore",
+  "name": "Allama Iqbal International",
+  "country": "Pakistan"
+ },
+ {
+  "code": "ISB",
+  "city": "Islamabad",
+  "name": "Islamabad International",
+  "country": "Pakistan"
+ },
+ {
+  "code": "PEW",
+  "city": "Peshawar",
+  "name": "Bacha Khan International",
+  "country": "Pakistan"
+ },
+ {
+  "code": "MUX",
+  "city": "Multan",
+  "name": "Multan International",
+  "country": "Pakistan"
+ },
+ {
+  "code": "SKT",
+  "city": "Sialkot",
+  "name": "Sialkot International",
+  "country": "Pakistan"
+ },
+ {
+  "code": "DEL",
+  "city": "New Delhi",
+  "name": "Indira Gandhi International",
+  "country": "India"
+ },
+ {
+  "code": "BOM",
+  "city": "Mumbai",
+  "name": "Chhatrapati Shivaji Maharaj",
+  "country": "India"
+ },
+ {
+  "code": "BLR",
+  "city": "Bengaluru",
+  "name": "Kempegowda International",
+  "country": "India"
+ },
+ {
+  "code": "HYD",
+  "city": "Hyderabad",
+  "name": "Rajiv Gandhi International",
+  "country": "India"
+ },
+ {
+  "code": "COK",
+  "city": "Kochi",
+  "name": "Cochin International",
+  "country": "India"
+ },
+ {
+  "code": "MAA",
+  "city": "Chennai",
+  "name": "Chennai International",
+  "country": "India"
+ },
+ {
+  "code": "DAC",
+  "city": "Dhaka",
+  "name": "Hazrat Shahjalal International",
+  "country": "Bangladesh"
+ },
+ {
+  "code": "CMB",
+  "city": "Colombo",
+  "name": "Bandaranaike International",
+  "country": "Sri Lanka"
+ },
+ {
+  "code": "KTM",
+  "city": "Kathmandu",
+  "name": "Tribhuvan International",
+  "country": "Nepal"
+ },
+ {
+  "code": "MLE",
+  "city": "Malé",
+  "name": "Velana International",
+  "country": "Maldives"
+ },
+ {
+  "code": "IST",
+  "city": "Istanbul",
+  "name": "Istanbul Airport",
+  "country": "Türkiye"
+ },
+ {
+  "code": "SAW",
+  "city": "Istanbul",
+  "name": "Sabiha Gökçen",
+  "country": "Türkiye"
+ },
+ {
+  "code": "ASR",
+  "city": "Kayseri (Cappadocia)",
+  "name": "Erkilet",
+  "country": "Türkiye"
+ },
+ {
+  "code": "AYT",
+  "city": "Antalya",
+  "name": "Antalya Airport",
+  "country": "Türkiye"
+ },
+ {
+  "code": "CAI",
+  "city": "Cairo",
+  "name": "Cairo International",
+  "country": "Egypt"
+ },
+ {
+  "code": "AMM",
+  "city": "Amman",
+  "name": "Queen Alia International",
+  "country": "Jordan"
+ },
+ {
+  "code": "BEY",
+  "city": "Beirut",
+  "name": "Rafic Hariri International",
+  "country": "Lebanon"
+ },
+ {
+  "code": "GYD",
+  "city": "Baku",
+  "name": "Heydar Aliyev International",
+  "country": "Azerbaijan"
+ },
+ {
+  "code": "TBS",
+  "city": "Tbilisi",
+  "name": "Tbilisi International",
+  "country": "Georgia"
+ },
+ {
+  "code": "ALA",
+  "city": "Almaty",
+  "name": "Almaty International",
+  "country": "Kazakhstan"
+ },
+ {
+  "code": "TAS",
+  "city": "Tashkent",
+  "name": "Islam Karimov Tashkent",
+  "country": "Uzbekistan"
+ },
+ {
+  "code": "LHR",
+  "city": "London",
+  "name": "Heathrow",
+  "country": "United Kingdom"
+ },
+ {
+  "code": "LGW",
+  "city": "London",
+  "name": "Gatwick",
+  "country": "United Kingdom"
+ },
+ {
+  "code": "MAN",
+  "city": "Manchester",
+  "name": "Manchester Airport",
+  "country": "United Kingdom"
+ },
+ {
+  "code": "BHX",
+  "city": "Birmingham",
+  "name": "Birmingham Airport",
+  "country": "United Kingdom"
+ },
+ {
+  "code": "CDG",
+  "city": "Paris",
+  "name": "Charles de Gaulle",
+  "country": "France"
+ },
+ {
+  "code": "FRA",
+  "city": "Frankfurt",
+  "name": "Frankfurt am Main",
+  "country": "Germany"
+ },
+ {
+  "code": "MUC",
+  "city": "Munich",
+  "name": "Munich Airport",
+  "country": "Germany"
+ },
+ {
+  "code": "AMS",
+  "city": "Amsterdam",
+  "name": "Schiphol",
+  "country": "Netherlands"
+ },
+ {
+  "code": "ZRH",
+  "city": "Zurich",
+  "name": "Zurich Airport",
+  "country": "Switzerland"
+ },
+ {
+  "code": "GVA",
+  "city": "Geneva",
+  "name": "Geneva Airport",
+  "country": "Switzerland"
+ },
+ {
+  "code": "FCO",
+  "city": "Rome",
+  "name": "Fiumicino",
+  "country": "Italy"
+ },
+ {
+  "code": "MXP",
+  "city": "Milan",
+  "name": "Malpensa",
+  "country": "Italy"
+ },
+ {
+  "code": "MAD",
+  "city": "Madrid",
+  "name": "Adolfo Suárez Barajas",
+  "country": "Spain"
+ },
+ {
+  "code": "BCN",
+  "city": "Barcelona",
+  "name": "El Prat",
+  "country": "Spain"
+ },
+ {
+  "code": "VIE",
+  "city": "Vienna",
+  "name": "Vienna International",
+  "country": "Austria"
+ },
+ {
+  "code": "ATH",
+  "city": "Athens",
+  "name": "Athens International",
+  "country": "Greece"
+ },
+ {
+  "code": "JTR",
+  "city": "Santorini",
+  "name": "Santorini (Thira)",
+  "country": "Greece"
+ },
+ {
+  "code": "JFK",
+  "city": "New York",
+  "name": "John F. Kennedy International",
+  "country": "United States"
+ },
+ {
+  "code": "EWR",
+  "city": "Newark",
+  "name": "Newark Liberty",
+  "country": "United States"
+ },
+ {
+  "code": "IAD",
+  "city": "Washington",
+  "name": "Dulles International",
+  "country": "United States"
+ },
+ {
+  "code": "ORD",
+  "city": "Chicago",
+  "name": "O'Hare International",
+  "country": "United States"
+ },
+ {
+  "code": "LAX",
+  "city": "Los Angeles",
+  "name": "Los Angeles International",
+  "country": "United States"
+ },
+ {
+  "code": "SFO",
+  "city": "San Francisco",
+  "name": "San Francisco International",
+  "country": "United States"
+ },
+ {
+  "code": "IAH",
+  "city": "Houston",
+  "name": "George Bush Intercontinental",
+  "country": "United States"
+ },
+ {
+  "code": "YYZ",
+  "city": "Toronto",
+  "name": "Pearson International",
+  "country": "Canada"
+ },
+ {
+  "code": "YVR",
+  "city": "Vancouver",
+  "name": "Vancouver International",
+  "country": "Canada"
+ },
+ {
+  "code": "BKK",
+  "city": "Bangkok",
+  "name": "Suvarnabhumi",
+  "country": "Thailand"
+ },
+ {
+  "code": "HKT",
+  "city": "Phuket",
+  "name": "Phuket International",
+  "country": "Thailand"
+ },
+ {
+  "code": "KUL",
+  "city": "Kuala Lumpur",
+  "name": "Kuala Lumpur International",
+  "country": "Malaysia"
+ },
+ {
+  "code": "LGK",
+  "city": "Langkawi",
+  "name": "Langkawi International",
+  "country": "Malaysia"
+ },
+ {
+  "code": "SIN",
+  "city": "Singapore",
+  "name": "Changi",
+  "country": "Singapore"
+ },
+ {
+  "code": "DPS",
+  "city": "Bali",
+  "name": "Ngurah Rai International",
+  "country": "Indonesia"
+ },
+ {
+  "code": "CGK",
+  "city": "Jakarta",
+  "name": "Soekarno–Hatta",
+  "country": "Indonesia"
+ },
+ {
+  "code": "MNL",
+  "city": "Manila",
+  "name": "Ninoy Aquino International",
+  "country": "Philippines"
+ },
+ {
+  "code": "HKG",
+  "city": "Hong Kong",
+  "name": "Hong Kong International",
+  "country": "Hong Kong"
+ },
+ {
+  "code": "PEK",
+  "city": "Beijing",
+  "name": "Capital International",
+  "country": "China"
+ },
+ {
+  "code": "PVG",
+  "city": "Shanghai",
+  "name": "Pudong International",
+  "country": "China"
+ },
+ {
+  "code": "CAN",
+  "city": "Guangzhou",
+  "name": "Baiyun International",
+  "country": "China"
+ },
+ {
+  "code": "NRT",
+  "city": "Tokyo",
+  "name": "Narita International",
+  "country": "Japan"
+ },
+ {
+  "code": "HND",
+  "city": "Tokyo",
+  "name": "Haneda",
+  "country": "Japan"
+ },
+ {
+  "code": "ICN",
+  "city": "Seoul",
+  "name": "Incheon International",
+  "country": "South Korea"
+ },
+ {
+  "code": "SYD",
+  "city": "Sydney",
+  "name": "Kingsford Smith",
+  "country": "Australia"
+ },
+ {
+  "code": "MEL",
+  "city": "Melbourne",
+  "name": "Melbourne Airport",
+  "country": "Australia"
+ },
+ {
+  "code": "AKL",
+  "city": "Auckland",
+  "name": "Auckland Airport",
+  "country": "New Zealand"
+ },
+ {
+  "code": "NBO",
+  "city": "Nairobi",
+  "name": "Jomo Kenyatta International",
+  "country": "Kenya"
+ },
+ {
+  "code": "JNB",
+  "city": "Johannesburg",
+  "name": "O. R. Tambo International",
+  "country": "South Africa"
+ },
+ {
+  "code": "CPT",
+  "city": "Cape Town",
+  "name": "Cape Town International",
+  "country": "South Africa"
+ },
+ {
+  "code": "ADD",
+  "city": "Addis Ababa",
+  "name": "Bole International",
+  "country": "Ethiopia"
+ },
+ {
+  "code": "CMN",
+  "city": "Casablanca",
+  "name": "Mohammed V International",
+  "country": "Morocco"
+ },
+ {
+  "code": "RAK",
+  "city": "Marrakech",
+  "name": "Menara",
+  "country": "Morocco"
+ },
+ {
+  "code": "MRU",
+  "city": "Mauritius",
+  "name": "Sir Seewoosagur Ramgoolam",
+  "country": "Mauritius"
+ },
+ {
+  "code": "SEZ",
+  "city": "Mahé",
+  "name": "Seychelles International",
+  "country": "Seychelles"
+ }
+]

@@ -1,0 +1,26 @@
+{
+  "companyName": "OK FOR TRAVEL AND TOURISM CO",
+  "shortName": "OK FOR TRAVEL",
+  "tagline": "Your journey, perfectly planned.",
+  "whatsapp": "971500000000",
+  "phone": "+971 50 000 0000",
+  "email": "info@okfortravel.com",
+  "address": "Office 101, Business Bay, Dubai, UAE",
+  "currency": "USD",
+  "currencySymbol": "$",
+  "heroTitle": "Discover the World with Confidence",
+  "heroSubtitle": "Flights, holidays, Umrah and visa services — handpicked packages and real-time fares, with a travel expert one WhatsApp message away.",
+  "heroImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=80",
+  "social": {
+    "facebook": "#",
+    "instagram": "#",
+    "tiktok": "#",
+    "youtube": "#"
+  },
+  "stats": [
+    { "value": 15000, "suffix": "+", "label": "Happy travellers" },
+    { "value": 120, "suffix": "+", "label": "Destinations" },
+    { "value": 450, "suffix": "+", "label": "Airline partners" },
+    { "value": 12, "suffix": " yrs", "label": "Experience" }
+  ]
+}

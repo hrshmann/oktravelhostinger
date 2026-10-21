@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Admin — OK FOR TRAVEL AND TOURISM CO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { background: var(--bg-soft); }
+    .login { min-height: 100vh; display: grid; place-items: center; padding: 20px; background: radial-gradient(circle at 80% 10%, rgba(255,122,47,.3), transparent 40%), linear-gradient(135deg, var(--navy-800), var(--navy-900)); }
+    .login-card { background: #fff; border-radius: 24px; padding: 36px; width: min(420px, 100%); box-shadow: var(--shadow-lg); }
+    .login-card h1 { font-family: var(--display); font-weight: 400; font-size: 2rem; margin: 22px 0 6px; }
+    .admin { display: none; grid-template-columns: 250px 1fr; min-height: 100vh; }
+    .admin.show { display: grid; }
+    .side { background: var(--navy-900); color: #b8c4d9; padding: 22px 16px; position: sticky; top: 0; height: 100vh; display: flex; flex-direction: column; gap: 4px; }
+    .side .brand { margin-bottom: 26px; padding: 0 8px; }
+    .side .brand-text strong { color: #fff; font-size: .9rem; }
+    .side button, .side a.side-link { display: flex; align-items: center; gap: 12px; padding: 11px 14px; border-radius: 12px; font-weight: 600; font-size: .92rem; color: #b8c4d9; text-align: left; transition: all .2s; width: 100%; }
+    .side button:hover, .side a.side-link:hover { background: rgba(255,255,255,.06); color: #fff; }
+    .side button.active { background: var(--accent); color: #fff; }
+    .side .spacer { flex: 1; }
+    .side .count { margin-left: auto; background: rgba(255,255,255,.12); padding: 1px 8px; border-radius: 999px; font-size: .75rem; }
+    main.content { padding: 28px clamp(16px, 3vw, 40px); min-width: 0; }
+    .topline { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 24px; flex-wrap: wrap; }
+    .topline h1 { margin: 0; font-size: 1.6rem; }
+    .topline p { margin: 2px 0 0; color: var(--muted); }
+    .view { display: none; animation: fadeUp .35s var(--ease); }
+    .view.active { display: block; }
+    .cards4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px; }
+    .kpi { background: #fff; border-radius: 18px; padding: 20px; border: 1px solid var(--line); display: flex; gap: 14px; align-items: center; }
+    .kpi .ic { width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center; color: #fff; font-size: 1.2rem; }
+    .kpi b { display: block; font-size: 1.6rem; color: var(--ink); line-height: 1.1; }
+    .kpi small { color: var(--muted); font-weight: 600; }
+    .panel { background: #fff; border-radius: 18px; border: 1px solid var(--line); padding: 20px; }
+    .panel h3 { font-size: 1.05rem; }
+    .pkg-rows { display: grid; gap: 12px; }
+    .pkg-row { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 12px; display: grid; grid-template-columns: auto 92px 1fr auto auto; gap: 16px; align-items: center; transition: box-shadow .2s; }
+    .pkg-row:hover { box-shadow: var(--shadow-sm); }
+    .pkg-row.inactive { opacity: .55; }
+    .pkg-row img { width: 92px; height: 68px; object-fit: cover; border-radius: 10px; background: var(--line); }
+    .pkg-row h4 { margin: 0 0 2px; font-size: 1rem; }
+    .pkg-row small { color: var(--muted); }
+    .pkg-row .price { font-weight: 800; color: var(--ink); font-size: 1.1rem; text-align: right; }
+    .row-actions { display: flex; gap: 6px; }
+    .row-actions .icon-btn { width: 36px; height: 36px; }
+    .row-actions .icon-btn.danger:hover { border-color: #e53e3e; color: #e53e3e; }
+    .move { display: grid; gap: 2px; }
+    .move button { width: 28px; height: 22px; border-radius: 6px; color: var(--muted); display: grid; place-items: center; }
+    .move button:hover { background: var(--bg-soft); color: var(--ink); }
+    .switch { position: relative; display: inline-flex; align-items: center; gap: 8px; cursor: pointer; font-size: .82rem; font-weight: 600; color: var(--muted); }
+    .switch input { display: none; }
+    .switch i { width: 38px; height: 22px; border-radius: 999px; background: var(--line); position: relative; transition: background .2s; }
+    .switch i::after { content: ""; position: absolute; left: 3px; top: 3px; width: 16px; height: 16px; border-radius: 50%; background: #fff; transition: transform .2s; box-shadow: 0 1px 3px rgba(0,0,0,.2); }
+    .switch input:checked + i { background: var(--wa); }
+    .switch input:checked + i::after { transform: translateX(16px); }
+    .toggles { display: grid; gap: 6px; }
+
+    .drawer { position: fixed; inset: 0; z-index: 100; visibility: hidden; }
+    .drawer.open { visibility: visible; }
+    .drawer .modal-backdrop { opacity: 0; transition: opacity .3s; }
+    .drawer.open .modal-backdrop { opacity: 1; }
+    .drawer-box { position: absolute; right: 0; top: 0; bottom: 0; width: min(760px, 100%); background: #fff; transform: translateX(100%); transition: transform .4s var(--ease); display: flex; flex-direction: column; }
+    .drawer.open .drawer-box { transform: none; }
+    .drawer-head, .drawer-foot { padding: 18px 24px; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+    .drawer-foot { border-top: 1px solid var(--line); border-bottom: 0; }
+    .drawer-head h3 { margin: 0; }
+    .drawer-body { padding: 24px; overflow: auto; flex: 1; }
+    .fg { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .fg .c2 { grid-column: span 2; } .fg .c4 { grid-column: 1 / -1; }
+    .fl label { display: block; font-size: .78rem; font-weight: 700; color: var(--ink); margin-bottom: 6px; }
+    .fl small { color: var(--muted); font-weight: 500; }
+    .img-prev { grid-column: 1 / -1; display: flex; gap: 14px; align-items: center; }
+    .img-prev img { width: 180px; height: 120px; object-fit: cover; border-radius: 12px; background: var(--line); }
+    .section-title { grid-column: 1 / -1; font-size: .78rem; text-transform: uppercase; letter-spacing: .12em; color: var(--accent-600); font-weight: 800; margin: 10px 0 -4px; }
+
+    .enq { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; margin-bottom: 12px; display: grid; grid-template-columns: 1fr auto; gap: 14px; }
+    .enq pre { white-space: pre-wrap; font-family: inherit; margin: 8px 0 0; color: var(--ink); font-size: .92rem; }
+    .enq .meta { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; font-size: .8rem; color: var(--muted); }
+    .empty-sm { text-align: center; padding: 40px; color: var(--muted); background: #fff; border-radius: 16px; border: 1px dashed var(--line); }
+
+    @media (max-width: 960px) {
+      .admin.show { grid-template-columns: 1fr; }
+      .side { position: static; height: auto; flex-direction: row; flex-wrap: wrap; padding: 12px; }
+      .side .brand { width: 100%; margin-bottom: 8px; }
+      .side button, .side a.side-link { width: auto; }
+      .side .spacer { display: none; }
+      .cards4 { grid-template-columns: 1fr 1fr; }
+      .pkg-row { grid-template-columns: 70px 1fr; }
+      .pkg-row .move { display: none; }
+      .pkg-row img { width: 70px; height: 56px; }
+      .pkg-row .toggles, .pkg-row .row-actions { grid-column: 1 / -1; }
+      .toggles { grid-auto-flow: column; justify-content: start; gap: 16px; }
+      .fg { grid-template-columns: 1fr 1fr; }
+      .fg .c2 { grid-column: 1 / -1; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Login -->
+<div class="login" id="loginView">
+  <form class="login-card" id="loginForm">
+    <div class="brand"><div class="brand-mark"><span>OK</span></div><div class="brand-text"><strong>OK FOR TRAVEL</strong><small>Admin panel</small></div></div>
+    <h1>Welcome back</h1>
+    <p style="color:var(--muted)">Sign in to manage packages, enquiries and website settings.</p>
+    <input class="inp" type="password" id="pwd" placeholder="Admin password" required autofocus>
+    <button class="btn btn-primary btn-block" style="margin-top:14px" type="submit">Sign in</button>
+    <p style="margin:16px 0 0;font-size:.82rem;color:var(--muted)">Password is set with <code>ADMIN_PASSWORD</code> in the server's <code>.env</code> file.</p>
+  </form>
+</div>
+
+<!-- Admin app -->
+<div class="admin" id="adminView">
+  <aside class="side">
+    <a href="/" class="brand"><div class="brand-mark"><span>OK</span></div><div class="brand-text"><strong>OK FOR TRAVEL</strong></div></a>
+    <button data-view="dashboard" class="active"><svg class="i" data-icon="grid"></svg>Dashboard</button>
+    <button data-view="packages"><svg class="i" data-icon="palm"></svg>Packages<span class="count" id="cntPkg">0</span></button>
+    <button data-view="enquiries"><svg class="i" data-icon="inbox"></svg>Enquiries<span class="count" id="cntEnq">0</span></button>
+    <button data-view="settings"><svg class="i" data-icon="settings"></svg>Settings</button>
+    <div class="spacer"></div>
+    <a href="/" target="_blank" class="side-link"><svg class="i" data-icon="ext"></svg>View website</a>
+    <button id="logout"><svg class="i" data-icon="logout"></svg>Sign out</button>
+  </aside>
+
+  <main class="content">
+    <!-- Dashboard -->
+    <section class="view active" data-view="dashboard">
+      <div class="topline"><div><h1>Dashboard</h1><p>Overview of your travel business.</p></div>
+        <button class="btn btn-primary btn-sm" data-new-pkg><svg class="i" data-icon="plus"></svg>New package</button></div>
+      <div class="cards4">
+        <div class="kpi"><div class="ic" style="background:var(--accent)"><svg class="i" data-icon="palm"></svg></div><div><b id="kTotal">0</b><small>Total packages</small></div></div>
+        <div class="kpi"><div class="ic" style="background:var(--teal)"><svg class="i" data-icon="eye"></svg></div><div><b id="kActive">0</b><small>Live on website</small></div></div>
+        <div class="kpi"><div class="ic" style="background:var(--wa)"><svg class="i" data-icon="whatsapp"></svg></div><div><b id="kEnq">0</b><small>WhatsApp enquiries</small></div></div>
+        <div class="kpi"><div class="ic" style="background:var(--navy-700)"><svg class="i" data-icon="plane"></svg></div><div><b id="kProv" style="font-size:1.1rem">—</b><small>Flight fare source</small></div></div>
+      </div>
+      <div class="panel">
+        <div class="topline" style="margin-bottom:12px"><h3 style="margin:0">Latest enquiries</h3><button class="btn btn-ghost btn-sm" data-goto="enquiries">View all</button></div>
+        <div id="dashEnq"></div>
+      </div>
+    </section>
+
+    <!-- Packages -->
+    <section class="view" data-view="packages">
+      <div class="topline"><div><h1>Packages</h1><p>Add, edit, reorder and publish holiday packages.</p></div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <button class="btn btn-ghost btn-sm" id="exportBtn"><svg class="i" data-icon="download"></svg>Export</button>
+          <label class="btn btn-ghost btn-sm"><svg class="i" data-icon="upload"></svg>Import<input type="file" accept="application/json" id="importInput" hidden></label>
+          <button class="btn btn-primary btn-sm" data-new-pkg><svg class="i" data-icon="plus"></svg>New package</button>
+        </div></div>
+      <label class="input-ic" style="margin-bottom:16px;max-width:360px"><svg class="i" data-icon="search"></svg><input id="admSearch" placeholder="Search packages…"></label>
+      <div class="pkg-rows" id="pkgRows"></div>
+    </section>
+
+    <!-- Enquiries -->
+    <section class="view" data-view="enquiries">
+      <div class="topline"><div><h1>Enquiries</h1><p>Every WhatsApp click from the website is logged here.</p></div>
+        <button class="btn btn-ghost btn-sm" id="refreshEnq"><svg class="i" data-icon="refresh"></svg>Refresh</button></div>
+      <div id="enqList"></div>
+    </section>
+
+    <!-- Settings -->
+    <section class="view" data-view="settings">
+      <div class="topline"><div><h1>Settings</h1><p>Company details, WhatsApp number and homepage content.</p></div>
+        <button class="btn btn-primary btn-sm" form="settingsForm" type="submit"><svg class="i" data-icon="save"></svg>Save settings</button></div>
+      <form class="panel" id="settingsForm">
+        <div class="fg">
+          <div class="section-title">Company</div>
+          <div class="fl c2"><label>Company name</label><input class="inp" name="companyName"></div>
+          <div class="fl c2"><label>Short name <small>(logo & chat header)</small></label><input class="inp" name="shortName"></div>
+          <div class="fl c4"><label>Tagline</label><input class="inp" name="tagline"></div>
+          <div class="section-title">Contact & WhatsApp</div>
+          <div class="fl c2"><label>WhatsApp number <small>(international format, digits only, e.g. 971501234567)</small></label><input class="inp" name="whatsapp" inputmode="numeric" pattern="[0-9 +]{8,20}" required></div>
+          <div class="fl c2"><label>Phone (display)</label><input class="inp" name="phone"></div>
+          <div class="fl c2"><label>Email</label><input class="inp" name="email" type="email"></div>
+          <div class="fl c2"><label>Address</label><input class="inp" name="address"></div>
+          <div class="fl"><label>Currency code</label><input class="inp" name="currency" maxlength="3" placeholder="USD"></div>
+          <div class="fl"><label>Currency symbol</label><input class="inp" name="currencySymbol" placeholder="$"></div>
+          <div class="fl c2" style="align-self:end"><button type="button" class="btn btn-wa btn-sm" id="testWa"><svg class="i" data-icon="whatsapp"></svg>Test WhatsApp link</button></div>
+          <div class="section-title">Homepage hero</div>
+          <div class="fl c4"><label>Headline <small>(last word is highlighted)</small></label><input class="inp" name="heroTitle"></div>
+          <div class="fl c4"><label>Sub-headline</label><textarea class="inp" name="heroSubtitle"></textarea></div>
+          <div class="fl c4"><label>Background image URL</label><input class="inp" name="heroImage"></div>
+          <div class="section-title">Social links</div>
+          <div class="fl"><label>Facebook</label><input class="inp" name="social.facebook"></div>
+          <div class="fl"><label>Instagram</label><input class="inp" name="social.instagram"></div>
+          <div class="fl"><label>TikTok</label><input class="inp" name="social.tiktok"></div>
+          <div class="fl"><label>YouTube</label><input class="inp" name="social.youtube"></div>
+          <div class="section-title">Stats counters</div>
+          <div class="fl c4" id="statsFields"></div>
+        </div>
+      </form>
+    </section>
+  </main>
+</div>
+
+<!-- Package editor drawer -->
+<div class="drawer" id="drawer">
+  <div class="modal-backdrop" data-drawer-close></div>
+  <form class="drawer-box" id="pkgForm">
+    <div class="drawer-head"><h3 id="drawerTitle">New package</h3><button type="button" class="icon-btn" data-drawer-close aria-label="Close"><svg class="i" data-icon="x"></svg></button></div>
+    <div class="drawer-body">
+      <div class="fg">
+        <div class="fl c4"><label>Package title *</label><input class="inp" name="title" required></div>
+        <div class="fl c2"><label>Destination *</label><input class="inp" name="destination" required></div>
+        <div class="fl c2"><label>Category *</label><input class="inp" name="category" list="catList" required><datalist id="catList"></datalist></div>
+        <div class="fl"><label>Days</label><input class="inp" name="days" type="number" min="1" required></div>
+        <div class="fl"><label>Nights</label><input class="inp" name="nights" type="number" min="0" required></div>
+        <div class="fl"><label>Price / person *</label><input class="inp" name="price" type="number" min="0" step="1" required></div>
+        <div class="fl"><label>Old price <small>(strike)</small></label><input class="inp" name="oldPrice" type="number" min="0" step="1"></div>
+        <div class="fl"><label>Rating</label><input class="inp" name="rating" type="number" min="0" max="5" step="0.1"></div>
+        <div class="fl"><label>Badge</label><input class="inp" name="badge" placeholder="Best Seller"></div>
+        <div class="fl c2" style="display:flex;gap:20px;align-items:end;padding-bottom:10px">
+          <label class="switch"><input type="checkbox" name="active"><i></i>Live on site</label>
+          <label class="switch"><input type="checkbox" name="featured"><i></i>Featured</label>
+        </div>
+        <div class="fl c4"><label>Image URL</label><input class="inp" name="image" placeholder="https://…"></div>
+        <div class="img-prev"><img id="imgPrev" alt="Preview"><label class="btn btn-ghost btn-sm"><svg class="i" data-icon="upload"></svg>Upload image<input type="file" accept="image/*" id="imgUpload" hidden></label></div>
+        <div class="fl c4"><label>Description</label><textarea class="inp" name="description" rows="3"></textarea></div>
+        <div class="fl c2"><label>Inclusions <small>(one per line)</small></label><textarea class="inp" name="inclusions" rows="7"></textarea></div>
+        <div class="fl c2"><label>Itinerary <small>(one day per line)</small></label><textarea class="inp" name="itinerary" rows="7"></textarea></div>
+      </div>
+    </div>
+    <div class="drawer-foot">
+      <button type="button" class="btn btn-ghost" data-drawer-close>Cancel</button>
+      <button type="submit" class="btn btn-primary"><svg class="i" data-icon="save"></svg>Save package</button>
+    </div>
+  </form>
+</div>
+
+<div class="toast-wrap" id="toasts"></div>
+<script src="js/icons.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OK FOR TRAVEL AND TOURISM CO — Flights, Holidays, Umrah & Visa</title>
+  <meta name="description" content="OK FOR TRAVEL AND TOURISM CO — search cheap flights, book holiday packages, Umrah and visa services. Talk to a travel expert on WhatsApp.">
+  <meta name="theme-color" content="#0b1f3a">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%230b1f3a'/><circle cx='54' cy='10' r='12' fill='%23ff7a2f'/><text x='32' y='42' font-family='Arial' font-weight='800' font-size='26' fill='white' text-anchor='middle'>OK</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <a data-bind-href="tel" href="#"><svg class="i" data-icon="phone"></svg><span data-bind="phone"></span></a>
+      <a data-bind-href="mailto" href="#"><svg class="i" data-icon="mail"></svg><span data-bind="email"></span></a>
+      <a href="#contact"><svg class="i" data-icon="pin"></svg><span data-bind="address"></span></a>
+    </div>
+    <div class="topbar-right">
+      <a href="#" data-social="facebook" aria-label="Facebook"><svg class="i" data-icon="facebook"></svg></a>
+      <a href="#" data-social="instagram" aria-label="Instagram"><svg class="i" data-icon="instagram"></svg></a>
+      <a href="#" data-social="youtube" aria-label="YouTube"><svg class="i" data-icon="youtube"></svg></a>
+    </div>
+  </div>
+</div>
+
+<!-- Navigation -->
+<header class="nav" id="nav">
+  <div class="container">
+    <a href="#home" class="brand" aria-label="Home">
+      <div class="brand-mark"><span>OK</span></div>
+      <div class="brand-text"><strong data-bind="shortName">OK FOR TRAVEL</strong><small>Travel &amp; Tourism Co</small></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#flights">Flights</a></li>
+      <li><a href="#packages">Packages</a></li>
+      <li><a href="#destinations">Destinations</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#packages" class="btn btn-ghost btn-sm">View deals</a>
+      <button class="btn btn-wa btn-sm" data-wa="Hello! I'd like help planning a trip."><svg class="i" data-icon="whatsapp"></svg><span>WhatsApp us</span></button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu"><svg class="i" data-icon="menu"></svg></button>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="container">
+    <div class="hero-content reveal">
+      <div class="eyebrow"><b>NEW</b> Winter 2026 deals — up to 25% off</div>
+      <h1 data-bind-html="heroTitleHtml">Discover the World with <em>Confidence</em></h1>
+      <p class="lead" data-bind="heroSubtitle"></p>
+      <div class="hero-actions">
+        <a href="#flights" class="btn btn-primary"><svg class="i" data-icon="plane"></svg>Search flights</a>
+        <a href="#packages" class="btn btn-light"><svg class="i" data-icon="compass"></svg>Explore packages</a>
+      </div>
+      <div class="hero-trust">
+        <div class="avatars">
+          <span style="background:#ff7a2f">AK</span><span style="background:#12b5a5">SR</span><span style="background:#1b437a">MH</span><span style="background:#f5b83d">FZ</span>
+        </div>
+        <div><span class="stars">★★★★★</span><br>Rated 4.9/5 by 15,000+ travellers</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-float">
+    <div class="float-card"><div class="ic"><svg class="i" data-icon="plane"></svg></div><div><small>Dubai → London</small><strong>Fares from $389</strong></div></div>
+    <div class="float-card"><div class="ic" style="background:#e6f9f3;color:#0c8a6a"><svg class="i" data-icon="shield"></svg></div><div><small>Umrah 2026</small><strong>Visa in 48 hours</strong></div></div>
+  </div>
+</section>
+
+<!-- Search engine -->
+<div class="search-wrap" id="flights">
+  <div class="container">
+    <div class="search-card reveal">
+      <div class="search-tabs" role="tablist">
+        <button class="search-tab active" data-tab="flight"><svg class="i" data-icon="plane"></svg>Flights</button>
+        <button class="search-tab" data-tab="holiday"><svg class="i" data-icon="palm"></svg>Holidays</button>
+        <button class="search-tab" data-tab="umrah"><svg class="i" data-icon="moon"></svg>Umrah &amp; Hajj</button>
+        <button class="search-tab" data-tab="visa"><svg class="i" data-icon="passport"></svg>Visa</button>
+      </div>
+
+      <!-- Flights -->
+      <form class="search-pane active" data-pane="flight" id="flightForm" autocomplete="off">
+        <div class="trip-types">
+          <label class="chip-radio"><input type="radio" name="trip" value="return" checked><span>Return</span></label>
+          <label class="chip-radio"><input type="radio" name="trip" value="oneway"><span>One way</span></label>
+        </div>
+        <div class="search-grid">
+          <div class="field f-from">
+            <label for="fromInput">From</label>
+            <input id="fromInput" placeholder="City or airport" data-airport="from" required>
+            <span class="sub" id="fromSub">Where are you leaving from?</span>
+            <div class="ac-list" id="fromList"></div>
+          </div>
+          <button type="button" class="swap-btn" id="swapBtn" aria-label="Swap airports"><svg class="i" data-icon="swap"></svg></button>
+          <div class="field f-to">
+            <label for="toInput">To</label>
+            <input id="toInput" placeholder="City or airport" data-airport="to" required>
+            <span class="sub" id="toSub">Where are you going?</span>
+            <div class="ac-list" id="toList"></div>
+          </div>
+          <div class="field f-date">
+            <label for="departDate">Depart</label>
+            <input type="date" id="departDate" required>
+          </div>
+          <div class="field f-ret" id="returnField">
+            <label for="returnDate">Return</label>
+            <input type="date" id="returnDate">
+          </div>
+          <div class="field f-trav">
+            <label>Travellers &amp; class</label>
+            <button type="button" class="field-btn" id="travBtn">1 Adult</button>
+            <span class="sub" id="travSub">Economy</span>
+            <div class="pop" id="travPop">
+              <div class="counter-row"><div><strong>Adults</strong><small>12+ years</small></div>
+                <div class="counter"><button type="button" data-count="-1">−</button><output id="adultCount">1</output><button type="button" data-count="1">+</button></div></div>
+              <div class="cabin-opts">
+                <label><input type="radio" name="cabin" value="economy" checked><span>Economy</span></label>
+                <label><input type="radio" name="cabin" value="premium_economy"><span>Premium Eco</span></label>
+                <label><input type="radio" name="cabin" value="business"><span>Business</span></label>
+                <label><input type="radio" name="cabin" value="first"><span>First</span></label>
+              </div>
+              <button type="button" class="btn btn-primary btn-sm btn-block" style="margin-top:14px" id="travDone">Done</button>
+            </div>
+          </div>
+          <button class="btn btn-primary search-btn" type="submit"><svg class="i" data-icon="search"></svg>Search</button>
+        </div>
+        <div class="search-foot">
+          <span class="provider-pill" id="providerPill"><span class="dot"></span><span>Checking fare source…</span></span>
+          <span>Popular: <a href="#" data-quick="DXB-LHR">DXB → LHR</a> · <a href="#" data-quick="KHI-JED">KHI → JED</a> · <a href="#" data-quick="DXB-IST">DXB → IST</a> · <a href="#" data-quick="LHE-DXB">LHE → DXB</a></span>
+        </div>
+      </form>
+
+      <!-- Holidays / Umrah / Visa enquiries -->
+      <form class="search-pane" data-pane="holiday" data-enquiry="Holiday package">
+        <div class="enquiry-grid">
+          <div class="field"><label>Destination</label><input name="Destination" placeholder="e.g. Maldives" required></div>
+          <div class="field"><label>Travel month</label><input name="Month" type="month" required></div>
+          <div class="field"><label>Travellers</label><input name="Travellers" type="number" min="1" value="2"></div>
+          <div class="field"><label>Budget (per person)</label><select name="Budget"><option>Under $750</option><option selected>$750 – $1,500</option><option>$1,500 – $3,000</option><option>$3,000+</option></select></div>
+          <button class="btn btn-wa search-btn" type="submit"><svg class="i" data-icon="whatsapp"></svg>Get quote</button>
+        </div>
+      </form>
+      <form class="search-pane" data-pane="umrah" data-enquiry="Umrah / Hajj package">
+        <div class="enquiry-grid">
+          <div class="field"><label>Package</label><select name="Package"><option>Economy Umrah</option><option selected>Premium Umrah</option><option>VIP Umrah</option><option>Hajj 2027</option></select></div>
+          <div class="field"><label>Departure city</label><input name="From" placeholder="e.g. Karachi" required></div>
+          <div class="field"><label>Travel month</label><input name="Month" type="month" required></div>
+          <div class="field"><label>Pilgrims</label><input name="Pilgrims" type="number" min="1" value="2"></div>
+          <button class="btn btn-wa search-btn" type="submit"><svg class="i" data-icon="whatsapp"></svg>Get quote</button>
+        </div>
+      </form>
+      <form class="search-pane" data-pane="visa" data-enquiry="Visa service">
+        <div class="enquiry-grid">
+          <div class="field"><label>Visa for</label><select name="Country"><option>UAE</option><option>Saudi Arabia</option><option>Schengen</option><option>United Kingdom</option><option>Türkiye</option><option>USA</option><option>Other</option></select></div>
+          <div class="field"><label>Nationality</label><input name="Nationality" placeholder="e.g. Pakistani" required></div>
+          <div class="field"><label>Visa type</label><select name="Type"><option>Tourist</option><option>Visit / Family</option><option>Business</option><option>Transit</option></select></div>
+          <div class="field"><label>Applicants</label><input name="Applicants" type="number" min="1" value="1"></div>
+          <button class="btn btn-wa search-btn" type="submit"><svg class="i" data-icon="whatsapp"></svg>Ask now</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Flight results -->
+<section class="section" id="flights-results">
+  <div class="container">
+    <div class="results-layout">
+      <button class="btn btn-ghost btn-sm filter-toggle" id="filterToggle" type="button"><svg class="i" data-icon="sort"></svg>Filters</button>
+      <aside class="filters" id="filters">
+        <h4>Stops</h4>
+        <div id="stopFilters"></div>
+        <h4>Max price</h4>
+        <div class="range-label"><span id="priceMin"></span><span id="priceVal"></span></div>
+        <input type="range" id="priceRange">
+        <h4>Departure time</h4>
+        <div id="timeFilters">
+          <label class="check"><span><input type="checkbox" value="0" checked>Night (00–06)</span></label>
+          <label class="check"><span><input type="checkbox" value="1" checked>Morning (06–12)</span></label>
+          <label class="check"><span><input type="checkbox" value="2" checked>Afternoon (12–18)</span></label>
+          <label class="check"><span><input type="checkbox" value="3" checked>Evening (18–24)</span></label>
+        </div>
+        <h4>Airlines</h4>
+        <div id="airlineFilters"></div>
+      </aside>
+      <div>
+        <div class="results-summary">
+          <div><h3 id="resultsTitle">Flights</h3><small id="resultsSub"></small></div>
+          <button class="btn btn-ghost btn-sm" data-wa-dynamic="flight-help"><svg class="i" data-icon="whatsapp"></svg>Need help? Ask an agent</button>
+        </div>
+        <div class="sort-tabs" id="sortTabs">
+          <button class="sort-tab active" data-sort="price"><strong>Cheapest</strong><small id="sortPrice">—</small></button>
+          <button class="sort-tab" data-sort="duration"><strong>Fastest</strong><small id="sortDuration">—</small></button>
+          <button class="sort-tab" data-sort="depart"><strong>Earliest</strong><small id="sortDepart">—</small></button>
+        </div>
+        <div id="resultsNotice"></div>
+        <div id="resultsList"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="stats">
+  <div class="container"><div class="stats-grid" id="statsGrid"></div></div>
+</section>
+
+<!-- Packages -->
+<section class="section" id="packages">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <span class="kicker">Holiday packages</span>
+        <h2>Handpicked trips you'll love</h2>
+        <p>All-inclusive packages with flights, hotels, transfers and tours — book in minutes over WhatsApp.</p>
+      </div>
+    </div>
+    <div class="pkg-toolbar reveal">
+      <div class="chips" id="pkgChips"></div>
+      <div class="pkg-tools-right">
+        <label class="input-ic"><svg class="i" data-icon="search"></svg><input id="pkgSearch" placeholder="Search destination…"></label>
+        <label class="input-ic"><svg class="i" data-icon="sort"></svg>
+          <select id="pkgSort"><option value="featured">Featured first</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="days">Duration</option><option value="rating">Top rated</option></select>
+        </label>
+      </div>
+    </div>
+    <div class="pkg-grid" id="pkgGrid"></div>
+  </div>
+</section>
+
+<!-- Destinations -->
+<section class="section section-soft" id="destinations">
+  <div class="container">
+    <div class="section-head reveal">
+      <div><span class="kicker">Top destinations</span><h2>Where will you go next?</h2></div>
+      <p>Tap a destination to search live flight fares instantly.</p>
+    </div>
+    <div class="dest-grid reveal" id="destGrid"></div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="kicker">What we do</span>
+      <h2>Complete travel services under one roof</h2>
+      <p>From your first enquiry to your safe return, our team handles every detail.</p>
+    </div>
+    <div class="svc-grid" id="svcGrid"></div>
+  </div>
+</section>
+
+<!-- Why us -->
+<section class="section section-soft">
+  <div class="container why">
+    <div class="why-visual reveal">
+      <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1000&q=80" alt="Traveller planning a trip with a map" loading="lazy">
+      <div class="why-badge"><b>24/7</b><span>WhatsApp support<br>wherever you are</span></div>
+    </div>
+    <div class="reveal">
+      <span class="kicker">Why choose us</span>
+      <div class="section-head" style="margin-bottom:0"><h2>Travel made simple, honest and personal</h2></div>
+      <div class="why-list">
+        <div class="why-item"><div class="n">01</div><div><h4>Best price promise</h4><p>Direct airline and hotel contracts mean better fares. Found it cheaper? We'll match it.</p></div></div>
+        <div class="why-item"><div class="n">02</div><div><h4>Real humans on WhatsApp</h4><p>No bots, no call queues — a dedicated travel consultant replies within minutes.</p></div></div>
+        <div class="why-item"><div class="n">03</div><div><h4>Licensed &amp; trusted</h4><p>A registered travel and tourism company with 12 years of service and thousands of happy families.</p></div></div>
+        <div class="why-item"><div class="n">04</div><div><h4>Flexible payments</h4><p>Pay by bank transfer, card or in instalments on selected packages.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section class="section" id="reviews">
+  <div class="container">
+    <div class="section-head reveal">
+      <div><span class="kicker">Testimonials</span><h2>What our travellers say</h2></div>
+      <div class="carousel-nav">
+        <button class="icon-btn" id="testiPrev" aria-label="Previous"><svg class="i" data-icon="left"></svg></button>
+        <button class="icon-btn" id="testiNext" aria-label="Next"><svg class="i" data-icon="right"></svg></button>
+      </div>
+    </div>
+    <div class="testi-track-wrap reveal"><div class="testi-track" id="testiTrack"></div></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-soft" id="faq">
+  <div class="container faq-wrap">
+    <div class="reveal">
+      <span class="kicker">FAQ</span>
+      <div class="section-head" style="margin-bottom:20px"><h2>Questions? We've got answers.</h2></div>
+      <p>Can't find what you're looking for? Our consultants are one message away.</p>
+      <button class="btn btn-wa" data-wa="Hi, I have a question about booking."><svg class="i" data-icon="whatsapp"></svg>Chat on WhatsApp</button>
+    </div>
+    <div class="reveal" id="faqList"></div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div>
+        <span class="kicker" style="color:var(--gold)">Get in touch</span>
+        <h2>Ready to plan your next adventure?</h2>
+        <p>Send us your plans and a consultant will reply on WhatsApp with the best options and prices.</p>
+        <div class="contact-lines">
+          <a data-bind-href="tel" href="#"><span class="ic"><svg class="i" data-icon="phone"></svg></span><span data-bind="phone"></span></a>
+          <a data-bind-href="mailto" href="#"><span class="ic"><svg class="i" data-icon="mail"></svg></span><span data-bind="email"></span></a>
+          <div><span class="ic"><svg class="i" data-icon="pin"></svg></span><span data-bind="address"></span></div>
+        </div>
+      </div>
+      <form class="form-card" id="contactForm">
+        <h3>Send an enquiry</h3>
+        <small style="color:var(--muted)">Opens WhatsApp with your message ready to send.</small>
+        <div class="form-grid">
+          <input class="inp" name="Name" placeholder="Full name" required>
+          <input class="inp" name="Phone" placeholder="Phone / WhatsApp" required>
+          <select class="inp full" name="Service">
+            <option>Flight booking</option><option>Holiday package</option><option>Umrah / Hajj</option><option>Visa service</option><option>Hotel booking</option><option>Other</option>
+          </select>
+          <textarea class="inp full" name="Message" placeholder="Tell us about your trip — destination, dates, number of travellers…" required></textarea>
+          <button class="btn btn-wa full" type="submit"><svg class="i" data-icon="whatsapp"></svg>Send via WhatsApp</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a href="#home" class="brand"><div class="brand-mark"><span>OK</span></div><div class="brand-text"><strong data-bind="companyName"></strong></div></a>
+        <p style="margin-top:18px" data-bind="tagline"></p>
+        <div class="socials">
+          <a href="#" data-social="facebook" aria-label="Facebook"><svg class="i" data-icon="facebook"></svg></a>
+          <a href="#" data-social="instagram" aria-label="Instagram"><svg class="i" data-icon="instagram"></svg></a>
+          <a href="#" data-social="tiktok" aria-label="TikTok"><svg class="i" data-icon="music"></svg></a>
+          <a href="#" data-social="youtube" aria-label="YouTube"><svg class="i" data-icon="youtube"></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul><li><a href="#flights">Flight search</a></li><li><a href="#packages">Holiday packages</a></li><li><a href="#destinations">Destinations</a></li><li><a href="#services">Umrah &amp; Hajj</a></li><li><a href="#services">Visa services</a></li></ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul><li><a href="#reviews">Reviews</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li><li><a href="/admin">Admin login</a></li></ul>
+      </div>
+      <div>
+        <h4>Get exclusive deals</h4>
+        <p>Join our WhatsApp broadcast for flash sales and last-minute offers.</p>
+        <form class="newsletter" id="newsForm"><input placeholder="Your name" required aria-label="Your name"><button class="btn btn-primary btn-sm" type="submit">Join</button></form>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> <span data-bind="companyName"></span>. All rights reserved.</span>
+      <span>Fares shown are subject to availability at the time of booking.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Package modal -->
+<div class="modal" id="pkgModal" aria-hidden="true">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-box" role="dialog" aria-modal="true" id="pkgModalBox"></div>
+</div>
+
+<!-- WhatsApp chat widget -->
+<div class="wa-chat" id="waChat" aria-live="polite">
+  <div class="wa-head">
+    <div class="av">OK</div>
+    <div><strong data-bind="shortName">OK FOR TRAVEL</strong><small>Typically replies within minutes</small></div>
+    <button id="waClose" aria-label="Close chat"><svg class="i" data-icon="x"></svg></button>
+  </div>
+  <div class="wa-body" id="waBody"></div>
+  <form class="wa-input" id="waForm">
+    <input id="waInput" placeholder="Type a message" aria-label="Message">
+    <button type="submit" aria-label="Send"><svg class="i" data-icon="send"></svg></button>
+  </form>
+</div>
+<button class="wa-fab" id="waFab" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.32l-.34-.2-3.57.94.95-3.48-.22-.36a9.43 9.43 0 1 1 7.99 4.42zm8.02-17.45A11.3 11.3 0 0 0 12.05.72C5.8.72.72 5.8.72 12.04c0 2 .52 3.95 1.52 5.66L.62 23.6l6.03-1.58a11.3 11.3 0 0 0 5.4 1.38h.01c6.24 0 11.32-5.08 11.33-11.32 0-3.03-1.18-5.87-3.32-8.02z"/></svg><span class="badge">1</span></button>
+<button class="to-top" id="toTop" aria-label="Back to top"><svg class="i" data-icon="up"></svg></button>
+<div class="toast-wrap" id="toasts"></div>
+
+<script src="js/icons.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
